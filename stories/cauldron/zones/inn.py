@@ -6,16 +6,7 @@ The generated demo code below is provided for you to use or modify as you wish.
 (it creates a trivial location similar to the built-in demo story of the Tale library itself)
 """
 
-from tale.base import Location, Exit, Door, Key, Living, ParseResult
-from tale.errors import StoryCompleted
-from tale.lang import capital
-from tale.player import Player
-from tale.util import Context, call_periodically
-from tale.verbdefs import AGGRESSIVE_VERBS
-
-# define items and NPCs
-
-# Create location
+from tale.base import Location, Exit, Door
 
 ##### Lobby #####
 foyer_descr = """
