@@ -7,6 +7,7 @@ The generated demo code below is provided for you to use or modify as you wish.
 """
 
 from tale.base import Location, Exit, Door
+from zones.sarah import Sarah
 
 ##### Lobby #####
 foyer_descr = """
@@ -70,6 +71,12 @@ sitting_dining = Exit(directions=["east", "dining"],
 
 sitting_room.add_exits([sitting_foyer,
                         sitting_dining])
+
+sarah = Sarah(name="Sarah",
+              gender="f",
+              descr="Sarah sits here casually in a high backed chair."
+              )
+sitting_room.insert(sarah, None)
 
 ##### Dinning Room #####
 
