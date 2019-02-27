@@ -8,15 +8,12 @@ The generated demo code below is provided for you to use or modify as you wish.
 
 from tale.base import Location, Exit, Door
 from zones.sarah import Sarah
+from zones.descriptions import room_descriptions
 
 ##### Lobby #####
-foyer_descr = """
-    The foyer has a warm, dusty feel. Dark wood floors support
-    antique furniture. Black laced curtains frame misty windows that prevent
-    a clear view outisde.
-    """
+
 foyer = Location(name="Foyer",
-                 descr=foyer_descr)
+                 descr=room_descriptions['foyer'])
 # Build Exits
 foyer_closet = Exit(directions="closet",
                     target_location="inn.foyer_closet",
@@ -50,13 +47,7 @@ foyer_closet.add_exits([closet_foyer])
 
 ##### Sitting Room #####
 
-sitting_room_desc = """This cozy sitting room is warmed by a fire in the
-                     fireplace. A long couch and a pair of overstuffed chairs
-                     leave a perfect place to sit and get warm. A bookshelf
-                     sits in the corner, laden with leather bound books that
-                     appear very old."""
-
-sitting_room = Location("Sitting Room", sitting_room_desc)
+sitting_room = Location("Sitting Room", room_descriptions['sitting_room'])
 
 sitting_foyer = Exit(directions=["foyer", "south"],
                      target_location="inn.foyer",
@@ -80,11 +71,7 @@ sitting_room.insert(sarah, None)
 
 ##### Dinning Room #####
 
-dining_room_desc = """This large dining room is set with several tables of various sizes.
-                    Fine crystal glasses and silver utensils adorn the tables, and a large
-                    fire burns brightly in the fireplace."""
-
-dining_room = Location("Dining Room", dining_room_desc)
+dining_room = Location("Dining Room", room_descriptions['dining_room'])
 
 dining_sitting = Exit(directions=["west", "sitting"],
                       target_location="inn.sitting_room",
