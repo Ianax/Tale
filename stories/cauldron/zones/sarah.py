@@ -4,6 +4,7 @@ from tale.base import Living, ParseResult
 from tale.util import Context, call_periodically
 from tale.lang import capital
 from tale.verbdefs import AGGRESSIVE_VERBS
+from zones.descriptions import sarah_text
 
 class Sarah(Living):
     def init(self) -> None:
@@ -16,7 +17,7 @@ class Sarah(Living):
             actor.tell('')
 
             if 'herself' in parsed.args:
-                actor.tell("Ah, how nice. You'd like to know about . . . me.")
+                actor.tell(sarah_text["about_herself"])
 
         return True
 

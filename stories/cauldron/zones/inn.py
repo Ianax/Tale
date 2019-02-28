@@ -8,7 +8,7 @@ The generated demo code below is provided for you to use or modify as you wish.
 
 from tale.base import Location, Exit, Door
 from zones.sarah import Sarah
-from zones.descriptions import room_descriptions
+from zones.descriptions import room_descriptions, sarah_text
 
 ##### Lobby #####
 
@@ -65,7 +65,7 @@ sitting_room.add_exits([sitting_foyer,
 
 sarah = Sarah(name="Sarah",
               gender="f",
-              descr="Sarah sits here casually in a high backed chair."
+              descr=sarah_text['description']
               )
 sitting_room.insert(sarah, None)
 
